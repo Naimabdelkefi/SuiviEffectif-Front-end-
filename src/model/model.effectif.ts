@@ -1,0 +1,21 @@
+export class Effectif{
+  id:number;
+  pôle:String;
+  nom:String;
+  prénom:String;
+  cuid:String=null;
+  job_list:String=null;
+  poste_Administratif:String=null;
+  nom_de_responsable_associé:String=null;
+  département:String=null;
+  date_dentrée:String=null;
+  date_de_sortie:String=null;
+  motif_de_sortie:String=null;
+  date_dépôt_Démission:String=null;
+  hf:String=null;
+  etat_Recrutement:String=null;
+  motif_dentrée:String=null;
+  projet:String=null;
+  description:String=null;
+  commentaires:String=null;
+}

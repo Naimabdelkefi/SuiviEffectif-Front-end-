@@ -1,0 +1,82 @@
+<section class="content">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <h2>TurnOver
+
+        </h2>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+
+
+    <!-- Exportable Table -->
+    <div class="row clearfix">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="header">
+            <ul class="header-dropdown">
+              <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
+                  <li><a href="javascript:void(0);">Action</a></li>
+                  <li><a href="javascript:void(0);">Another action</a></li>
+                  <li><a href="javascript:void(0);">Something else</a></li>
+                </ul>
+              </li>
+              <li class="remove">
+                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="body">
+            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+              <thead>
+              <tr>
+                <th>Date</th>
+                <th>Mobilité</th>
+                <th>Démission</th>
+                <th>Talent Sharing</th>
+                <th>Congé Sans Solde</th>
+                <th>Depart</th>
+                <th>Entree</th>
+                <th>Effectif</th>
+                <th>Valeur</th>
+              </tr>
+              </thead>
+              <tfoot>
+              <tr>
+                <th>Date</th>
+                <th>Mobilité</th>
+                <th>Démission</th>
+                <th>Talent Sharing</th>
+                <th>Congé Sans Solde</th>
+                <th>Depart</th>
+                <th>Entree</th>
+                <th>Effectif</th>
+                <th>Valeur</th>
+              </tr>
+              </tfoot>
+              <tbody>
+              <tr *ngFor="let entry of TurnOver">
+                <td class="date">{{entry.Periode}}</td>
+                <td (click)="infoDate(entry.Periode,'mobilité')">{{entry.Mobilite}}</td>
+                <td (click)="infoDate(entry.Periode,'Démission')">{{entry.Demission}}</td>
+                <td (click)="infoDate(entry.Periode,'Talent Sharing')">{{entry.TalentSharing}}</td>
+                <td (click)="infoDate(entry.Periode,'Congé sans solde')">{{entry.congeSansSolde}}</td>
+                <td  (click)="infoDepart(entry.Periode)">  {{entry.Depart}}</td>
+                <td (click)="infoEntry(entry.Periode)">{{entry.Entree}}</td>
+                <td>{{entry.Effectif}}</td>
+                <td>{{entry.Valeur}}</td>
+            </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# Exportable Table -->
+  </div>
+</section>

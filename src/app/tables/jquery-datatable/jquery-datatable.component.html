@@ -1,0 +1,79 @@
+<section class="content">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <h2>Liste d'effectif
+
+        </h2>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <!-- Exportable Table -->
+    <div class="row clearfix">
+      <div class="col-lg-12">
+        <div class="card">
+
+          <div class="body">
+            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+              <thead>
+              <tr>
+                <th>Action</th>
+                <th>Pôle</th>
+                <th>Nom et Prénom</th>
+                <th>CUID</th>
+                <th>Job list</th>
+                <th>Poste Administratif</th>
+                <th>Nom de responsable associé</th>
+                <th>Département</th>
+                <th>Date de entrée</th>
+                <th>Date de sortie</th>
+                <th>Motif de sortie</th>
+                <th>Sexe</th>
+
+              </tr>
+              </thead>
+              <tfoot>
+              <tr>
+                <th>Action</th>
+                <th>Pôle</th>
+                <th>Nom et Prénom</th>
+                <th>CUID</th>
+                <th>Job list</th>
+                <th>Poste Administratif</th>
+                <th>Nom de responsable associé</th>
+                <th>Département</th>
+                <th>Date de entrée</th>
+                <th>Date de sortie</th>
+                <th>Motif de sortie</th>
+                <th>Sexe</th>
+              </tr>
+              </tfoot>
+              <tbody>
+              <tr *ngFor="let entry of Effectif">
+                <td style='white-space: nowrap'>
+                  <button (click)="onEditContact(entry.id)" class="btn btn-primary" type="button"><i class="zmdi zmdi-edit"></i> </button>
+                  <button (click)="onDeleteContact(entry)" type="button" class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
+                <td>{{entry.Pole}}</td>
+                <td>{{entry.Nom}} {{entry.Prenom}}</td>
+                <td>{{entry.CUID}}</td>
+                <td>{{entry.JobList}}</td>
+                <td>{{entry.PosteAdmin}}</td>
+                <td>{{entry.NomResp}}</td>
+                <td>{{entry.Deprt}}</td>
+                <td>{{entry.DateEntr}}</td>
+                <td>{{entry.DateSort}}</td>
+                <td>{{entry.MotifSort}}</td>
+                <td>{{entry.Sexe}}</td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# Exportable Table -->
+  </div>
+</section>

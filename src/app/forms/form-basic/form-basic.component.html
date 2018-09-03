@@ -1,0 +1,204 @@
+<form id="form_validation">
+<section class="content">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <h2>Nouveaux collaborateur
+          <small>Ajouter un Nouveaux collaborateur</small>
+        </h2>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Pole -->
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2> <strong>Pôle</strong> </h2>
+
+          </div>
+          <div class="body">
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <select class="form-control selectpicker show-tick"  [(ngModel)]="pole" name="pole">
+                  <option >Choisi Un Pole</option>
+                  <option value="OLS">OLS</option>
+                  <option value="OLN">OLN</option>
+                  <option value="OLR">OLR</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# Pole-->
+    <!-- Input -->
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2><strong>Détails</strong> <small>Les détails de la collaborateur</small> </h2>
+          </div>
+          <div class="body">
+            <h2 class="card-inside-title">Nom et Prénom</h2>
+            <div class="row clearfix">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nom"  [(ngModel)]="effectif.nom" name="nom"required/>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Prénom" [(ngModel)]="prenom" name="prenom"required/>
+                </div>
+              </div>
+            </div>
+
+            <div class="row clearfix">
+              <div class="col-lg-3 col-md-6">
+                <h2 class="card-inside-title">CUID</h2>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="effectif.cuid" name="cuid"required/>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h2 class="card-inside-title">Sexe</h2>
+                <select class="form-control selectpicker show-tick"  [(ngModel)]="effectif.hf"  name="hf" required>
+                  <option >Choisi le sexe</option>
+                  <option value="H">Homme</option>
+                  <option value="F">Femme</option>
+                </select>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Job list et Poste administratif</h2>
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Job list"  [(ngModel)]="effectif.job_list" name="joblist"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Poste administratif"  [(ngModel)]="effectif.poste_Administratif" name="posteadmin"/>
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Nom de responsable associé</h2>
+            <div class="row clearfix">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nom de responsable" [(ngModel)]="NomResp" name="nomresp"required/>
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Département et Projet</h2>
+            <div class="row clearfix">
+              <div class="col-sm-6">
+                <select class="form-control selectpicker show-tick"  [(ngModel)]="deprt" name="deprt">
+                  <option >Choisi Un Département</option>
+                  <option value="Developpement">Developpement</option>
+                  <option value="Architecture">Architecture</option>
+                  <option value="Direction">Direction</option>
+                  <option value="Enablers">Enablers</option>
+                  <option value="Recharging">Recharging</option>
+                  <option value="PMO">PMO</option>
+                  <option value="B2B Service & Contact Solutions">B2B Service & Contact Solutions</option>
+                  <option value="Integration">Integration</option>
+                  <option value="Expertise">Expertise</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Projet" [(ngModel)]="effectif.projet" name="projet" />
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Recrutement</h2>
+            <div class="row clearfix">
+              <div class="col-sm-4">
+                <select class="form-control selectpicker show-tick"  [(ngModel)]="effectif.etat_Recrutement" name="etatrect">
+                  <option value="">Etat Recrutement</option>
+                  <option value="Confirmé">Confirmé</option>
+                  <option value="en cours">En cours</option>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <select class="form-control selectpicker show-tick" [(ngModel)]="motifentre" name="motifentre">
+                  <option value="">Motif d'entrée</option>
+                  <option value="Remplacement">Remplacement</option>
+                  <option value="Nouveau Besoin">Nouveau Besoin</option>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="zmdi zmdi-calendar"></i>
+                                    </span>
+                  <input type="text" class="form-control datetimepicker Datedentrée" placeholder="Date d'entrée" name="dateentree" required>
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Sortie</h2>
+            <div class="row clearfix">
+              <div class="col-sm-4">
+                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="zmdi zmdi-calendar"></i>
+                                    </span>
+                  <input type="text" class="form-control datetimepicker DatedeSortie" placeholder="Date de Sortie" name="datesort">
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <select class="form-control selectpicker show-tick" [(ngModel)]="effectif.motif_de_sortie" name="motifsortie">
+                  <option value="">Motif de Sortie</option>
+                  <option value="mobilité">Mobilité</option>
+                  <option value="Congé sans solde">Congé sans solde</option>
+                  <option value="Démission">Démission</option>
+                  <option value="Talent Sharing">Talent Sharing</option>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="zmdi zmdi-calendar"></i>
+                                    </span>
+                  <input type="text" class="form-control datetimepicker Datedépôtdémission" placeholder="	Date dépôt démission" name="depotemi">
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Description</h2>
+            <div class="row clearfix">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="form-line">
+                    <textarea rows="4" class="form-control no-resize" placeholder="Description" [(ngModel)]="effectif.description" name="descrp"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="card-inside-title">Commentaires</h2>
+            <div class="row clearfix">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="form-line">
+                    <textarea rows="4" class="form-control no-resize" placeholder="Commentaires" [(ngModel)]="effectif.commentaires" name="comn"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <button class="btn btn-raised btn-primary btn-round waves-effect"  type="submit" (click)="SaveEffectif()">Ajouter</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- #END# Input -->
+  </div>
+</section>
+</form>

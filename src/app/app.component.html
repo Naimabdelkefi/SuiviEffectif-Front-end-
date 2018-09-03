@@ -1,0 +1,69 @@
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logoSofrecom.png" width="48" height="48" alt="Oreo"></div>
+        <p>Please wait...</p>
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div >
+    <!-- Top Bar -->
+    <nav class="navbar p-l-5 p-r-5">
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <div class="navbar-header">
+                    <a href="javascript:void(0);" class="bars"></a>
+                    <a class="navbar-brand" routerLink="/dashboard"><img src="assets/images/logoSofrecom.png" width="30" alt="Oreo"><span class="m-l-10">Sofrecom</span></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);" class="ls-toggle-btn hidden" data-close="true"><i class="zmdi zmdi-swap hiddentables"></i></a></li>
+
+            <li class="float-right">
+                <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+    <!-- Left Sidebar -->
+    <div >
+        <div >
+            <aside id="leftsidebar" class="sidebar">
+                <ul class="nav nav-tabs">
+                    <li class="nng serve
+                    av-item"></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane stretchRight active" id="dashboard">
+                        <div class="menu">
+                            <ul class="list">
+
+                                <li routerLinkActive="active open"> <a routerLink="/dashboard"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+
+                                </li>
+                              <li routerLinkActive="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> </a>
+                                <ul class="ml-menu">
+                                  <li routerLinkActive="active"><a routerLink="/tables/turn-over">TurnOver</a> </li>
+                                  <li routerLinkActive="active"><a routerLink="/tables/liste-effectif">Liste d'effecitif</a> </li>
+
+                                </ul>
+                              </li>
+                                <li routerLinkActive="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Gestion de données</span> </a>
+                                    <ul class="ml-menu">
+                                        <li routerLinkActive="active"><a routerLink="/effectif/new-effectif">Nouveaux collaborateur</a> </li>
+                                        <li routerLinkActive="active"><a routerLink="/effectif/upload">Mise à jour de la base</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+        </div>
+</div>
+
+<router-outlet></router-outlet>
